@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./style.scss">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header-navigation">
+      <span class="header-navigation__logo">SQWD</span>
+      <a href="#" class="header-navigation__link header-navigation__link--underscore-large">WORKS</a>
+      <a href="#" class="header-navigation__link header-navigation__link--underscore-small">ABOUT</a>
+      <a href="#" class="header-navigation__link header-navigation__link--underscore-small">SERVICES</a>
+      <a href="#" class="header-navigation__link header-navigation__link--underscore-small">BLOG</a>
+      <a href="#" class="header-navigation__link header-navigation__link--underscore-medium">CONTACT</a>
+    </nav>
+    <h1 class="header__heading">WHERE GREAT IDEAS COME TO LIFE</h1>
+    <p class="header__paragraph">Passionate creative studio helping startups grow their business!</p>
+    <ul class="header-navigation-controls">
+      <li class="header-navigation-control">01</li>
+      <li class="header-navigation-control">02</li>
+      <li class="header-navigation-control">03</li>
+    </ul>
+  </header>
+  <main>
+    <section class="about">
+      <article class="about-article about-article--top">
+        <h2 class="about-article__heading">
+          <b>We Are</b>
+          the SQWD
+        </h2>
+        <p class="about-article__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        <img class="about-article__image" src="./images/profilemanfoto.png" alt="A man looking out a window.">
+      </article>
+      <article class="about-article about-article--bottom">
+        <img class="about-article__image" src="./images/runningman.png" alt="A man walking on a staircase.">
+        <p class="about-article__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      </article>
+    </section>
+    <section class="services">
+      <h2 class="services__heading"></h2>
+      <ul class="services-list">
+        <li class="services-list-item">
+          <h3 class="services-list-item__heading">Branding</h3>
+          <img class="services-list-item__icon" src="./images/graphic-design.png" alt="graphic design">
+          <p class="services-list-item__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <a class="services-list-item__link" href="#">READ MORE</a>
+        </li>
+        <li class="services-list-item services-list-item--active">
+          <h3 class="services-list-item__heading">DESIGN</h3>
+          <img class="services-list-item__icon" src="./images/pencil-case.png" alt="graphic design">
+          <p class="services-list-item__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <a class="services-list-item__link" href="#">READ MORE</a>
+        </li>
+        <li class="services-list-item">
+          <h3 class="services-list-item__heading">DEVELOPMENT</h3>
+          <img class="services-list-item__icon" src="./images/coding.png" alt="graphic design">
+          <p class="services-list-item__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <a class="services-list-item__link" href="#">READ MORE</a>
+        </li>
+      </ul>
+    </section>
+    <section class="works">
+      <div class="works-main">
+        <h2 class="works-main__heading">Latest Works
+        </h2>
+        <ul class="works-main-categories">
+          <li class="works-main-category works-main-category--active">ALL</li>
+          <li class="works-main-category">WEB DESIGN</li>
+          <li class="works-main-category">BRANDING</li>
+          <li class="works-main-category">PHOTOGRAPHY</li>
+          <li class="works-main-category">ILLUSTRATION</li>
+        </ul>
+      </div>
+      <article class="works-post">
+        <h3 class="works-post__heading">100 YEARS<br>PHOTOGRAPHY</h3>
+        <img class="works-post__image" src="./images/fotoaparat.png" alt="fotoaparat">
+        <h4 class="works-post__subheading">Photography</h4>
+        <p class="works-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </article>
+      <article class="works-post works-post--cross">
+        <h3 class="works-post__heading">A KITTEN’S<br>LIFE</h3>
+        <img class="works-post__image" src="./images/cat.png" alt="kitten">
+        <h4 class="works-post__subheading">Photography</h4>
+        <p class="works-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#">READ MORE</a>
+      </article>
+      <article class="works-post">
+        <h3 class="works-post__heading">GROOVEMADE<br>
+          PRODUCTS FOR MAC</h3>
+        <img class="works-post__image" src="./images/macbook.png" alt="macbook">
+        <h4 class="works-post__subheading">Photography</h4>
+        <p class="works-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </article>
+      <article class="works-post">
+        <h3 class="works-post__heading">APPLE’s<br>LOST MAGIC</h3>
+        <img class="works-post__image" src="./images/laptop.png" alt="laptop">
+        <h4 class="works-post__subheading">Photography</h4>
+        <p class="works-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </article>
+      <a class="works-post__link" href="#">view more</a>
+    </section>
+    <section class="team">
+      <h2 class="team__heading">The Team</h2>
+      <ul class="team-list">
+        <li class="team-list-item">
+          <img class="team-list-item__image" src="./images/negativefoto.png" alt="">
+          <h3 class="team-list-item__name">TOM JONES</h3>
+        </li>
+        <li class="team-list-item">
+          <img class="team-list-item__image" src="./images/fotocolorman.png" alt="">
+          <h3 class="team-list-item__name">MICHAEL FRAUP</h3>
+          <hr class="team-list-item__line">
+          <h4 class="team-list-item__subheading">Creative Director</h4>
+          <p class="team-list-item__description">Create with simplicity in mind!</p>
+        </li>
+        <li class="team-list-item">
+          <img class="team-list-item__image" src="./images/afro.png" alt="">
+          <h3 class="team-list-item__name">TIM CAHILL</h3>
+        </li>
+      </ul>
+    </section>
+    <section class="testimonials">
+      <blockquote class="testimonial">
+        <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <img class="testimonial__image" src="./images/quote-hand-drawn-symbol.png" alt="quote">
+        <cite class="testimonial__cite"><strong>DAVID JAMES</strong> / Web Design</cite>
+        <ul class="testimonial-stars">
+          <li class="testimonial-stars-item">
+            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+          </li>
+          <li class="testimonial-stars-item">
+            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+          </li>
+          <li class="testimonial-stars-item">
+            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+          </li>
+          <li class="testimonial-stars-item">
+            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+          </li>
+          <li class="testimonial-stars-item testimonial-stars-item--unchecked">
+            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+          </li>
+        </ul>
+      </blockquote>
+    </section>
+    <section class="contacts">
+      <div class="contacts-form contacts-form--white">
+        <img src="./images/briefcase.png" alt="">
+        <h3 class="contacts-form__heading">Want to work together?</h3>
+        <p class="contacts-form__paragraph">Amazing. Tell us about your project!</p>
+        <a href="#" class="contacts-form__arrow"></a>
+      </div>
+      <div class="contacts-form contacts-form--green">
+        <img src="./images/mail.png" alt="">
+        <h3 class="contacts-form__heading">Contact us</h3>
+        <p class="contacts-form__paragraph">Get in touch</p>
+        <a href="#" class="contacts-form__arrow"></a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="footer-top">
+      <span class="footer-top__logo"></span>
+      <p class="footer-top__paragraph">3rd Floor, Santa Monica Beach, CA, San Francisco</p>
+      <p class="footer-top__paragraph">(359) 0 123 456 789 - info@yourmail.com</p>
+      <ul class="footer-top-list">
+        <li class="footer-top-list-item">
+          <a href="#" class="footer-top-list-item__link">
+            <img alt="Facebook icon" src="./images/facebook-logo-in-circular-button-outlined-social-symbol.png">
+          </a>
+        </li>
+        <li class="footer-top-list-item">
+          <a href="#" class="footer-top-list-item__link">
+            <img alt="Twitter icon" src="./images/twitter-circular-button.png">
+          </a>
+        </li>
+        <li class="footer-top-list-item">
+          <a href="#" class="footer-top-list-item__link">
+            <img alt="Pinterest icon" src="./images/pinterest-logo.png">
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer-bottom">
+      <p class="footer-bottom__copyright">Copyright 2016 - All Rights Reserved - Designed by JD</p>
+    </section>
+  </footer>
+</body>
+
+</html>

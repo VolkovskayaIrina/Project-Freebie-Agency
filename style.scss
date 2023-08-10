@@ -1,0 +1,64 @@
+@use "sass:math";
+
+@font-face {
+    font-family: Root;
+    font-weight: 400;
+    src: url("./fonts/OpenSans-Regular.woff2") format("woff2"),
+        url("./fonts/OpenSans-Regular.woff") format("woff2");
+}
+
+@font-face {
+    font-family: Root;
+    font-weight: 500;
+    src: url("./fonts/OpenSans-Bold.woff2") format("woff2"),
+        url("./fonts/OpenSans-Bold.woff") format("woff2");
+}
+
+@font-face {
+    font-family: Root;
+    font-weight: 600;
+    src: url("./fonts/Oswald-Regular.woff2") format("woff2"),
+        url("./fonts/Oswald-Regular.woff") format("woff2");
+}
+
+@font-face {
+    font-family: Root;
+    font-weight: 700;
+    src: url("./fonts/Oswald-Bold.woff2") format("woff2"),
+        url("./fonts/Oswald-Bold.woff") format("woff2");
+}
+
+@function pixelsToVW($targetWidth) {
+    @return math.div($targetWidth * 100vw, 1440px);
+}
+
+body {
+    margin: 0;
+    font-family: Root, sans-serif;
+}
+
+    .header {
+        background-image: url(./images/headimage.png);
+        background-position: center;
+        background-size: cover;
+        padding-top: 79px;
+        padding-bottom: 19px;
+
+        &-navigation {
+            display: flex;
+            align-items: center;
+            gap: 58px;
+            margin: 0 auto;
+            width: pixelsToVW(1177px);
+
+            &__logo {
+                flex-grow: 1;
+            }
+
+            &__link {
+                &:last-child {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
