@@ -3,33 +3,37 @@
 @font-face {
     font-family: Root;
     font-weight: 400;
-    src: url("./fonts/OpenSans-Regular.woff2") format("woff2"),
+    src:
+        url("./fonts/OpenSans-Regular.woff2") format("woff2"),
         url("./fonts/OpenSans-Regular.woff") format("woff2");
 }
 
 @font-face {
     font-family: Root;
     font-weight: 500;
-    src: url("./fonts/OpenSans-Bold.woff2") format("woff2"),
+    src:
+        url("./fonts/OpenSans-Bold.woff2") format("woff2"),
         url("./fonts/OpenSans-Bold.woff") format("woff2");
 }
 
 @font-face {
     font-family: Root;
     font-weight: 600;
-    src: url("./fonts/Oswald-Regular.woff2") format("woff2"),
+    src:
+        url("./fonts/Oswald-Regular.woff2") format("woff2"),
         url("./fonts/Oswald-Regular.woff") format("woff2");
 }
 
 @font-face {
     font-family: Root;
     font-weight: 700;
-    src: url("./fonts/Oswald-Bold.woff2") format("woff2"),
+    src:
+        url("./fonts/Oswald-Bold.woff2") format("woff2"),
         url("./fonts/Oswald-Bold.woff") format("woff2");
 }
 
 @function pixelsToVW($targetWidth) {
-    @return math.div($targetWidth * 100vw, 1440px);
+    @return math.div($targetWidth * 100vw, 1800px);
 }
 
 body {
@@ -37,28 +41,153 @@ body {
     font-family: Root, sans-serif;
 }
 
-    .header {
+.header {
+    position: relative;
+
+    padding-top: 79px;
+    padding-bottom: 19px;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
         background-image: url(./images/headimage.png);
         background-position: center;
         background-size: cover;
-        padding-top: 79px;
-        padding-bottom: 19px;
+        filter: brightness(40%);
+        content: "";
+    }
 
-        &-navigation {
-            display: flex;
-            align-items: center;
-            gap: 58px;
-            margin: 0 auto;
-            width: pixelsToVW(1177px);
+    &-navigation {
+        display: flex;
+        align-items: center;
+        gap: 58px;
+        margin: 0 auto;
+        width: pixelsToVW(1177px);
 
-            &__logo {
-                flex-grow: 1;
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
+
+        &__logo {
+            flex-grow: 1;
+            font-size: 36px;
+            line-height: 30px;
+            letter-spacing: 2.3px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        &__link {
+            position: relative;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 20.75px;
+            color: #fff;
+            letter-spacing: 1.94px;
+
+            &::before {
+                position: absolute;
+                top: 19px;
+                right: 0;
+                height: 2px;
+                background-color: #4caf50;
+                content: "";
             }
 
-            &__link {
-                &:last-child {
-                    margin-left: 6px;
+            &--underscore {
+                &-large::before {
+                    width: 54.91px;
                 }
+
+                &-small::before {
+                    width: 17.97px;
+                }
+
+                &-medium::before {
+                    width: 19.44px;
+                }
+            }
+
+            &:last-child {
+                margin-left: 6px;
             }
         }
     }
+
+    &__heading {
+        margin-top: 283px;
+        margin-bottom: 24.5px;
+        font-size: 72px;
+        line-height: 106.7px;
+        letter-spacing: 4.61px;
+        padding: 0 10px;
+        color: #fff;
+        text-align: center;
+    }
+
+    &__paragraph {
+        margin-top: 0;
+        margin-bottom: 303.5px;
+        padding: 0 10px;
+        font-size: 20px;
+        line-height: 23.44px;
+        letter-spacing: 1.28px;
+        text-align: center;
+        color: #fff;
+    }
+
+    &-controls {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        gap: 9px;
+        align-items: baseline;
+    }
+
+    &-control {
+        font-size: 18px;
+        line-height: 26.68px;
+        letter-spacing: 1.15px;
+        opacity: 0.4372;
+        font-weight: 700;
+
+        &--active {
+            position: relative;
+            font-size: 36px;
+            line-height: 53.35px;
+            letter-spacing: 2.3px;
+            opacity: 1;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: -2px;
+                width: 10px;
+                height: 2px;
+                background-color: #4caf50;
+                z-index: 1;
+                content: "";
+            }
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 1px;
+                width: 40px;
+                height: 2px;
+                background-color: #4caf50;
+                z-index: -1;
+                content: "";
+            }
+        }
+    }
+}
