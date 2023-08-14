@@ -20,16 +20,16 @@
     font-family: Root;
     font-weight: 500;
     src:
-        url("./fonts/OpenSans-Bold.woff2") format("woff2"),
-        url("./fonts/OpenSans-Bold.woff") format("woff2");
+        url("./fonts/Oswald-Regular.woff2") format("woff2"),
+        url("./fonts/Oswald-Regular.woff") format("woff2");
 }
 
 @font-face {
     font-family: Root;
     font-weight: 600;
     src:
-        url("./fonts/Oswald-Regular.woff2") format("woff2"),
-        url("./fonts/Oswald-Regular.woff") format("woff2");
+        url("./fonts/Oswald-Bold.woff2") format("woff2"),
+        url("./fonts/Oswald-Bold.woff") format("woff2");
 }
 
 @font-face {
@@ -370,6 +370,167 @@ body {
                 bottom: -150px;
                 transform: translateX(25%);
             }
+        }
+    }
+}
+
+@mixin sectionHeading {
+    &__heading {
+        position: relative;
+        font-size: 48px;
+        line-height: 71.14px;
+        letter-spacing: 3.07px;
+        color: #252525;
+        margin-top: 0;
+
+        &::before {
+            position: absolute;
+            width: 45px;
+            height: 2px;
+            left: 0;
+            bottom: -7px;
+            content: '';
+            background-color: #252525;
+        }
+    }
+}
+
+.services {
+    @include sectionHeading;
+    background-color: #FBFBFB;
+    padding: pixelsToVW(135px) pixelsToVW(312px) pixelsToVW(136px) pixelsToVW(315px);
+
+    @media (max-width: 500px) {
+        padding-right: 0;
+    }
+
+    @media (max-width: 400px) {
+        padding-left: 10px;
+    }
+
+    &__heading {
+        margin-bottom: 85px;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        padding: 0;
+        list-style-type: none;
+        margin: 0;
+
+        &-item {
+            position: relative;
+            width: 370px;
+            height: 260px;
+            box-sizing: border-box;
+            background-color: #fff;
+            padding: 53px 49px 35px 44px;
+
+            &--active {
+                border-bottom: 3px solid #70BF73;
+
+            }
+
+            &__heading {
+                position: relative;
+                margin-top: 0;
+                margin-bottom: 36px;
+                font-size: 20px;
+                line-height: 29.64px;
+                letter-spacing: 1.28px;
+                color: #252525;
+                text-transform: uppercase;
+                font-weight: 500;
+
+                &::before {
+                    position: absolute;
+                    width: 35px;
+                    height: 2px;
+                    left: 0;
+                    bottom: -15px;
+                    background-color: #252525;
+                    content: '';
+
+                }
+            }
+
+            &__icon-wrap-outer {
+                position: absolute;
+                top: 63px;
+                right: 60px;
+                width: 25px;
+                height: 25px;
+                z-index: 1;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 50px;
+                    height: 50px;
+                    content: '';
+                    background-color: #fff;
+                    border-radius: 50%;
+                    box-shadow: 0 0 20px #dbdbdb;
+                    z-index: -1;
+                }
+            }
+
+            &__icon-wrap {
+               width: inherit;
+               height: inherit;
+               overflow: hidden;
+            }
+
+            &__icon {
+                width: 25px;
+                height: inherit;
+                margin-left: -25px;
+                background-position: center;
+                background-repeat: no-repeat;
+                filter: drop-shadow(25px 0 #bcbcbc);
+                -webkit-filter: drop-shadow(25px 0 #bcbcbc);
+
+                &--pencil {
+                    background-image: url("./images/graphic-design.png");
+                }
+
+                &--design {
+                    background-image: url("./images/pencil-case.png");
+                }
+
+                &--coding {
+                    background-image: url("./images/coding.png");
+                }
+            }
+
+            &__paragraph {
+                font-size: 12px;
+                line-height: 25px;
+                letter-spacing: 1.01px;
+                color: #777;
+                margin-top: 0;
+                margin-bottom: 19px;
+            }
+
+            &__link {
+                font-size: 10px;
+                line-height: 14.82px;
+                font-weight: 500;
+                letter-spacing: 0.64px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #252525;
+            }
+        }
+
+        &-item--active &-item__icon {
+            margin-left: 0;
+            filter: revert;
+            -webkit-filter: revert;
         }
     }
 }
