@@ -5,7 +5,7 @@
     font-weight: 300;
     src:
         url("./fonts/OpenSans-Light.woff2") format("woff2"),
-        url("./fonts/OpenSans-Light.woff") format("woff2");
+        url("./fonts/OpenSans-Light.woff") format("woff");
 }
 
 @font-face {
@@ -13,7 +13,15 @@
     font-weight: 400;
     src:
         url("./fonts/OpenSans-Regular.woff2") format("woff2"),
-        url("./fonts/OpenSans-Regular.woff") format("woff2");
+        url("./fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: Root;
+    font-weight: 200;
+    src:
+        url("./fonts/Oswald-ExtraLight.woff2") format("woff2"),
+        url("./fonts/Oswald-ExtraLight.woff") format("woff");
 }
 
 @font-face {
@@ -21,15 +29,15 @@
     font-weight: 500;
     src:
         url("./fonts/Oswald-Regular.woff2") format("woff2"),
-        url("./fonts/Oswald-Regular.woff") format("woff2");
+        url("./fonts/Oswald-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: Root;
     font-weight: 600;
     src:
-        url("./fonts/Oswald-Bold.woff2") format("woff2"),
-        url("./fonts/Oswald-Bold.woff") format("woff2");
+        url("./fonts/Oswald-Medium.woff2") format("woff2"),
+        url("./fonts/Oswald-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -37,7 +45,7 @@
     font-weight: 700;
     src:
         url("./fonts/Oswald-Bold.woff2") format("woff2"),
-        url("./fonts/Oswald-Bold.woff") format("woff2");
+        url("./fonts/Oswald-Bold.woff") format("woff");
 }
 
 @function pixelsToVW($targetWidth) {
@@ -85,13 +93,13 @@ body {
             font-size: 36px;
             line-height: 30px;
             letter-spacing: 2.3px;
-            font-weight: 600;
+            font-weight: 700;
             color: #fff;
         }
 
         &__link {
             position: relative;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             font-size: 14px;
             line-height: 20.75px;
@@ -772,7 +780,7 @@ body {
         justify-self: flex-end;
         text-decoration: none;
         font-size: 13px;
-        font-weight: 600;
+        font-weight: 700;
         line-height: 19.27px;
         letter-spacing: 2px;
         color: #252525;
@@ -921,6 +929,141 @@ body {
                 }
             }
         }
-
     }
 }
+
+.testimonials {
+    padding: pixelsToVW(117px) 0;
+}
+
+.testimonial {
+    position: relative;
+    width: pixelsToVW(1172px);
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__text {
+        max-width: pixelsToVW(735px);
+        font-size: 14px;
+        line-height: 31px;
+        letter-spacing: 0.9px;
+        color: #373737;
+        margin-top: 0;
+        margin-bottom: 31px;
+    }
+
+    &__image {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 29px;
+    }
+
+    &__cite {
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 20.75px;
+        font-style: normal;
+        letter-spacing: 0.9px;
+        color: #B8B8B8;
+        margin-bottom: 25px;
+    }
+
+    &__cite-slash {
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 26.68px;
+        letter-spacing: 1.15px;
+        color: #B8B8B8;
+    }
+
+    &__cite-strong {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26.68px;
+        letter-spacing: 1.15px;
+        color: #373737;
+    }
+
+    &-stars {
+        display: flex;
+        gap: 9px;
+        margin-top: 0;
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 29px;
+
+        &-item {
+            width: 15px;
+            height: 15px;
+
+            &--unchecked {
+                opacity: 0.2;
+            }
+
+            &__image {
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
+
+    &__line {
+        width: pixelsToVW(511px);
+        border-color: rgba(#D8D8D8, 0.5);
+        margin: 0 auto;
+        opacity: 0.5;
+    }
+
+    &-arrows {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__button {
+            width: 20px;
+            height: 20px;
+            border: none;
+            background-color: transparent;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: #D8D8D8;
+                top: 50%;
+                transform: translateY(-50%);
+                content: '';
+            }
+
+            &::after {
+                position: absolute;
+                left: 4px;
+                height: 10px;
+                width: 10px;
+                top: 0;
+                content: '';
+                border-top: 2px solid #D8D8D8;
+                border-right: 2px solid #D8D8D8;
+                transform: rotate(-135deg) translateY(-50%);
+                display: inline-block;
+            }
+
+            &--right::after {
+                left: initial;
+                right: -4px;
+                transform: rotate(45deg) translateY(50%);
+            }
+        }
+    }
+}
+ 
