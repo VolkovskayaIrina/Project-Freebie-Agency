@@ -1067,3 +1067,105 @@ body {
     }
 }
  
+.contacts {
+    display: flex;
+
+    @media (max-width: 600px){
+        flex-direction: column;
+        align-items: stretch;
+    
+    }
+
+    &-form {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+        box-sizing: border-box;
+        padding-top: 69px;
+
+        @media (max-width: 600px) {
+           padding-top: 45px;
+           padding-bottom: 24px;
+        }
+
+        &--white {
+            background-color: #FBFBFB;
+            color: #373737;
+        }
+
+        &--green {
+            background-color: #70BD59;
+            color: #fff;
+        }
+
+        &--green &__arrow {
+            opacity: 0.3;
+
+            &::before {
+                background-color: #373737;
+            }
+
+            &::after {
+                border-color: #373737;
+            }
+        }
+
+        &__heading {
+           margin-top: 19px;
+           margin-bottom: 22px;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 35.57px;
+            letter-spacing: 2.67px;
+            
+        }
+
+        &__paragraph {
+            margin: 0;
+            margin-bottom: 23px;
+            font-size: 14px;
+            line-height: 16.41px;
+            letter-spacing: 1.56px;
+            opacity: 0.8;
+        }
+
+        &__arrow {
+            width: 9px;
+            height: 9px;
+            border: none;
+            background-color: transparent;
+            position: relative;
+            opacity: 0.6;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: #D8D8D8;
+                top: 50%;
+                transform: translateY(-50%);
+                content: '';
+            }
+
+            &::after {
+                position: absolute;
+                right: -2px;
+                height: 4.5px;
+                width: 4.5px;
+                top: -1px;
+                content: '';
+                border-top: 1px solid #D8D8D8;
+                border-right: 1px solid #D8D8D8;
+                transform: rotate(45deg) translateY(50%);
+                display: inline-block;
+
+                @media (max-width: 368px) {
+                    top: -0.5px;
+                }
+            }
+        }
+    }
+}
