@@ -10,21 +10,58 @@
 
 <body>
   <header class="header">
-    <nav class="header-navigation">
-      <span class="header-navigation__logo">SQWD</span>
-      <a href="#" class="header-navigation__link header-navigation__link--underscore-large">WORKS</a>
-      <a href="#" class="header-navigation__link header-navigation__link--underscore-small">ABOUT</a>
-      <a href="#" class="header-navigation__link header-navigation__link--underscore-small">SERVICES</a>
-      <a href="#" class="header-navigation__link header-navigation__link--underscore-small">BLOG</a>
-      <a href="#" class="header-navigation__link header-navigation__link--underscore-medium">CONTACT</a>
-    </nav>
-    <h1 class="header__heading">WHERE GREAT IDEAS COME TO LIFE</h1>
-    <p class="header__paragraph">Passionate creative studio helping startups grow their business!</p>
+    <input type="radio" id="header-slide-1" name="header-slides" checked class="header__hidden-radio">
+    <input type="radio" id="header-slide-2" name="header-slides" class="header__hidden-radio">
+    <input type="radio" id="header-slide-3" name="header-slides" class="header__hidden-radio">
     <ul class="header-controls">
-      <li class="header-control header-control--active">01</li>
-      <li class="header-control">02</li>
-      <li class="header-control">03</li>
+      <li class="header-control">
+        <label for="header-slide-1">01</label>
+      </li>
+      <li class="header-control">
+        <label for="header-slide-2">02</label>
+      </li>
+      <li class="header-control">
+        <label for="header-slide-3">03</label>
+      </li>
     </ul>
+    <div class="header-slides">
+      <div class="header-slide">
+        <nav class="header-navigation">
+          <span class="header-navigation__logo">SQWD</span>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-large">WORKS</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-small">ABOUT</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-small">SERVICES</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-small">BLOG</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-medium">CONTACT</a>
+        </nav>
+        <h1 class="header__heading">WHERE GREAT IDEAS COME TO LIFE</h1>
+        <p class="header__paragraph">Passionate creative studio helping startups grow their business!</p>
+      </div>
+      <div class="header-slide">
+        <nav class="header-navigation">
+          <span class="header-navigation__logo">SQWD</span>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-large">WORKS</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-small">ABOUT</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-small">GALLERY</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-small">CHAT</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-medium">MEETUPS</a>
+        </nav>
+        <h1 class="header__heading">THE CREATIVE WORKDAYS OF OUR DESIGNERS!</h1>
+        <p class="header__paragraph">Our designer crew is highly creative and are able to manifest your unimaginable fantasies into reality.</p>
+      </div>
+      <div class="header-slide">
+        <nav class="header-navigation">
+          <span class="header-navigation__logo">SQWD</span>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-large">WORKS</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-small">ABOUT</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-small">SERVICES</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-small">BLOG</a>
+          <a href="#" class="header-navigation__link header-navigation__link--underscore-medium">CONTACT</a>
+        </nav>
+        <h1 class="header__heading">OUR TEAM</h1>
+        <p class="header__paragraph">We're made of blood and metal, for we are malleable as a child and as serious as a lion.</p>
+      </div>
+    </div>
   </header>
   <main>
     <section class="about">
