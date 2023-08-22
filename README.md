@@ -2,6 +2,7 @@
 
 Practice landing page from Figma: https://verstaem.online/projects/freebie/
 Built using Vite, SCSS and BEM methodology. 
+Preview website at: https://freebie-agency-irina-volkovskaya.surge.sh/
 
 Run the following commands to get started:
 ```
