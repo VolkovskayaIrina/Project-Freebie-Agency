@@ -177,33 +177,94 @@
       </ul>
     </section>
     <section class="testimonials">
-      <blockquote class="testimonial">
-        <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <img class="testimonial__image" src="./images/quote-hand-drawn-symbol.png" alt="quote">
-        <cite class="testimonial__cite"><strong class="testimonial__cite-strong">DAVID JAMES</strong><span class="testimonial__cite-slash"> / </span>Web Design</cite>
-        <ul class="testimonial-stars">
-          <li class="testimonial-stars-item">
-            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
-          </li>
-          <li class="testimonial-stars-item">
-            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
-          </li>
-          <li class="testimonial-stars-item">
-            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
-          </li>
-          <li class="testimonial-stars-item">
-            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
-          </li>
-          <li class="testimonial-stars-item testimonial-stars-item--unchecked">
-            <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
-          </li>
-        </ul>
-        <hr class="testimonial__line">
-        <div class="testimonial-arrows">
-          <button class="testimonial-arrows__button testimonial-arrows__button--left" aria-label="Left Slide"></button>
-          <button class="testimonial-arrows__button testimonial-arrows__button--right" aria-label="Right Slide"></button>
+      <input type="radio" id="testimonials-slide-1" name="testimonials-slides" checked class="testimonials__hidden-radio">
+      <input type="radio" id="testimonials-slide-2" name="testimonials-slides" class="testimonials__hidden-radio">
+      <input type="radio" id="testimonials-slide-3" name="testimonials-slides" class="testimonials__hidden-radio">
+      <div class="testimonials-arrows">
+        <div class="testimonials-arrows__button-wrap">
+          <label class="testimonials-arrows__button testimonials-arrows__button--left" aria-label="Left Slide" for="testimonials-slide-1"></label>
+          <label class="testimonials-arrows__button testimonials-arrows__button--left" aria-label="Left Slide" for="testimonials-slide-2"></label>
+          <label class="testimonials-arrows__button testimonials-arrows__button--left" aria-label="Left Slide" for="testimonials-slide-3"></label>
         </div>
-      </blockquote>
+        <div class="testimonials-arrows__button-wrap">
+          <label class="testimonials-arrows__button testimonials-arrows__button--right" aria-label="Right Slide" for="testimonials-slide-1"></label>
+          <label class="testimonials-arrows__button testimonials-arrows__button--right" aria-label="Right Slide" for="testimonials-slide-2"></label>
+          <label class="testimonials-arrows__button testimonials-arrows__button--right" aria-label="Right Slide" for="testimonials-slide-3"></label>
+        </div>
+      </div>
+      <div class="testimonials-slides-wrap">
+        <div class="testimonials-slides">
+          <blockquote class="testimonial">
+            <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img class="testimonial__image" src="./images/quote-hand-drawn-symbol.png" alt="quote">
+            <cite class="testimonial__cite"><strong class="testimonial__cite-strong">DAVID JAMES</strong><span class="testimonial__cite-slash"> / </span>Web Design</cite>
+            <ul class="testimonial-stars">
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item testimonial-stars-item--unchecked">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+            </ul>
+            <hr class="testimonial__line">
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img class="testimonial__image" src="./images/quote-hand-drawn-symbol.png" alt="quote">
+            <cite class="testimonial__cite"><strong class="testimonial__cite-strong">MORPHEUS & NEO</strong><span class="testimonial__cite-slash"> / </span>DevOps</cite>
+            <ul class="testimonial-stars">
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item testimonial-stars-item--unchecked">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item testimonial-stars-item--unchecked">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item testimonial-stars-item--unchecked">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+            </ul>
+            <hr class="testimonial__line">
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img class="testimonial__image" src="./images/quote-hand-drawn-symbol.png" alt="quote">
+            <cite class="testimonial__cite"><strong class="testimonial__cite-strong">DAVY JONES</strong><span class="testimonial__cite-slash"> / </span>Frontend Developer</cite>
+            <ul class="testimonial-stars">
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+              <li class="testimonial-stars-item">
+                <img class="testimonial-stars-item__image" src="./images/star copy 3.png" alt="Star">
+              </li>
+            </ul>
+            <hr class="testimonial__line">
+          </blockquote>
+        </div>
+      </div>
     </section>
     <section class="contacts">
       <div class="contacts-form contacts-form--white">

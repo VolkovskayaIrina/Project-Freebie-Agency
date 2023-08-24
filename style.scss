@@ -48,6 +48,16 @@
         url("./fonts/Oswald-Bold.woff") format("woff");
 }
 
+@mixin hideCheckbox {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
 @function pixelsToVW($targetWidth) {
     @return math.div($targetWidth * 100vw, 1800px);
 }
@@ -63,13 +73,7 @@ body {
     overflow-x: hidden;
 
     &__hidden-radio {
-        position: absolute;
-        display: none;
-        opacity: 0;
-        width: 0;
-        height: 0;
-        box-sizing: border-box;
-        margin: 0;
+        @include hideCheckbox;
     }
 
     &-slides {
@@ -979,18 +983,119 @@ body {
 }
 
 .testimonials {
+    $numberOfSlides: 3;
+    position: relative;
     padding: pixelsToVW(117px) 0;
+
+    &__hidden-radio {
+        @include hideCheckbox;
+    }
+
+    &-slides-wrap {
+        width: pixelsToVW(1172px);
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    &-slides {
+        display: flex;
+        width: pixelsToVW(1172px * 3);
+        transition: all 0.6s ease-in-out;
+    }
+
+    @for $i from 2 through $numberOfSlides {
+        &__hidden-radio:nth-child(#{$i}):checked ~ &-arrows > :first-child > &-arrows__button:nth-child(#{$i - 1}) {
+            display: block;
+        }
+    }
+
+    &__hidden-radio:nth-child(1):checked ~ &-arrows > :first-child > &-arrows__button:last-child {
+        display: block;
+    }
+
+    @for $i from 1 through ($numberOfSlides - 1) {
+        &__hidden-radio:nth-child(#{$i}):checked ~ &-arrows > :last-child > &-arrows__button:nth-child(#{$i + 1}) {
+            display: block;
+        }
+    }
+
+    &__hidden-radio:nth-child(#{$numberOfSlides}):checked ~ &-arrows > :last-child > &-arrows__button:first-child {
+        display: block;
+    }
+
+    @for $i from 1 through $numberOfSlides {
+        &__hidden-radio:nth-child(#{$i}):checked ~ &-slides-wrap > &-slides {
+            transform: translateX(pixelsToVW(-1172px) * ($i - 1));
+        }
+    }
+
+    &-arrows {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        bottom: calc(12px + pixelsToVW(117px));
+        transform: translateX(-50%);
+        width: pixelsToVW(1172px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__button {
+            display: none;
+            width: 20px;
+            height: 20px;
+            padding: 1px 6px;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: #D8D8D8;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: -1;
+                content: '';
+                cursor: pointer;
+            }
+
+            &::after {
+                position: absolute;
+                left: 4px;
+                height: 10px;
+                width: 10px;
+                top: 0;
+                content: '';
+                border-top: 2px solid #D8D8D8;
+                border-right: 2px solid #D8D8D8;
+                transform: rotate(-135deg) translateY(-50%);
+                display: inline-block;
+                z-index: -1;
+                cursor: pointer;
+            }
+
+            &--right::after {
+                left: initial;
+                right: -4px;
+                transform: rotate(45deg) translateY(50%);
+            }
+        }
+    }
 }
 
 .testimonial {
-    position: relative;
-    width: pixelsToVW(1172px);
-    margin: 0 auto;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 0;
 
     &__text {
         max-width: pixelsToVW(735px);
@@ -1062,54 +1167,6 @@ body {
         border-color: rgba(#D8D8D8, 0.5);
         margin: 0 auto;
         opacity: 0.5;
-    }
-
-    &-arrows {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 12px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &__button {
-            width: 20px;
-            height: 20px;
-            border: none;
-            background-color: transparent;
-            position: relative;
-
-            &::before {
-                position: absolute;
-                left: 0;
-                right: 0;
-                height: 2px;
-                background-color: #D8D8D8;
-                top: 50%;
-                transform: translateY(-50%);
-                content: '';
-            }
-
-            &::after {
-                position: absolute;
-                left: 4px;
-                height: 10px;
-                width: 10px;
-                top: 0;
-                content: '';
-                border-top: 2px solid #D8D8D8;
-                border-right: 2px solid #D8D8D8;
-                transform: rotate(-135deg) translateY(-50%);
-                display: inline-block;
-            }
-
-            &--right::after {
-                left: initial;
-                right: -4px;
-                transform: rotate(45deg) translateY(50%);
-            }
-        }
     }
 }
  
